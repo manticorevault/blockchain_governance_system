@@ -1,0 +1,26 @@
+{
+  "name": "blockchain_governance_system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manticorevault/blockchain_governance_system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manticorevault/blockchain_governance_system/issues"
+  },
+  "homepage": "https://github.com/manticorevault/blockchain_governance_system#readme",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "ganache-cli": "^6.12.1",
+    "mocha": "^8.2.1",
+    "solc": "^0.7.5",
+    "web3": "^1.0.0-beta.35"
+  }
+}
