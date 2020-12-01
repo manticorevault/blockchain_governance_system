@@ -8,14 +8,20 @@ contract Project {
         uint value;
         address recipient;
         bool complete;
-        
-        
     }
     
+    Request[] public requests;
     address public manager;
     address[] public voters;
     uint public minimumAmount;
     
+    
+    // Create a modifier to lock out senders that
+    // are not the contract manager
+    modifier restricted() {
+        require(msg.sender == manager);
+        _;
+    }
     
     
     // Define - as props - a minimum amount one must pay
@@ -33,6 +39,20 @@ contract Project {
         
         // Add the payer to the voters array
         voters.push(msg.sender);
+    }
+    
+    // Declare the Request struct and add fields to it
+    // with the restricted modifier
+    function addRequest(string description, uint value, address recipient) restricted public {
+        Request memory newRequest = Request({
+           description: description,
+           value: value,
+           recipient: recipient,
+           complete: false
+        });
+        
+        // Add the request struct to the request array
+        requests.push(newRequest);
     }
     
 }
