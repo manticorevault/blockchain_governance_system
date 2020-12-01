@@ -16,6 +16,7 @@ contract Project {
     address public manager;
     uint public minimumAmount;
     mapping(address => bool) public voters;
+    uint public votersCount;
     
     
     // Create a modifier to lock out senders that
@@ -42,6 +43,7 @@ contract Project {
         // Adds a new key to the voters mapping
         // and attributes its value to true. 
         voters[msg.sender] = true;
+        votersCount++;
     }
     
     // Declare the Request struct and add fields to it
@@ -76,6 +78,24 @@ contract Project {
         // Add the address to the confirmations mapping
         request.confirmationCount++;
         
+    }
+    
+    // Function to conclude a request 
+    function completeRequest(uint index) restricted public {
+        
+        Request storage request = requests[index];
+        
+        // Confirms that the majority of voters approved a request
+        require(request.confirmationCount > (votersCount / 2));
+        
+        // Confirms if the request isn't marked as Complete 
+        require(!request.complete);
+        
+        // Confirms that money from the request is sent to the recipient
+        request.recipient.transfer(request.value);
+        
+        // Update the bool flag to true
+        request.complete = true;
     }
     
 }
