@@ -1,5 +1,29 @@
 pragma solidity ^0.4.17;
 
+
+// Write a Factory contract to create and deploy
+// instances of the Project contract, so the costs
+// are on the user. One contract to rule 'em all!
+
+contract ProjectFactory {
+    address[] public deployedProjects;
+    
+    // Allow the user to create a new instance of the Project contract
+    function createProject(uint minimum) public {
+        address newProject = new Project(minimum, msg.sender);
+        
+        // Push the address of the newly created project to
+        // the array of deployed projects.
+        deployedProjects.push(newProject);
+    }
+    
+    function getDeployedProjects() view public returns (address[]) {
+        return deployedProjects;
+    }
+}
+
+
+
 contract Project {
     
     // Request struct with all request's info
@@ -29,9 +53,9 @@ contract Project {
     
     // Define - as props - a minimum amount one must pay
     // in order to participate as a votingContributor
-    function Project(uint minimum) public {
+    function Project(uint minimum, address creator) public {
         // Define the manager as the one calling the contract
-        manager = msg.sender;
+        manager = creator;
         
         minimumAmount = minimum;
     }
