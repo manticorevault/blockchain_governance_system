@@ -16,10 +16,10 @@ const output = solc.compile(source, 1).contracts;
 // Checks if the build folder exists, otherwise create it
 fs.ensureDirSync(buildPath);
 
-// Creates the JSON related to the contract
+// Creates the JSON related to the contract, with proper cleaning
 for (let contract in output) {
     fs.outputJSONSync(
-        path.resolve(buildPath, contract + ".json"),
+        path.resolve(buildPath, contract.replace(":", "") + ".json"),
         output[contract]
     );
 }
