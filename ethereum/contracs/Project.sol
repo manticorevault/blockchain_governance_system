@@ -22,8 +22,7 @@ contract ProjectFactory {
     }
 }
 
-
-
+// Here the Project contract starts: 
 contract Project {
     
     // Request struct with all request's info
