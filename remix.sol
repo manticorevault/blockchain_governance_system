@@ -9,7 +9,7 @@ contract Project {
         address recipient;
         bool complete;
         uint confirmationCount;
-        mapping(address => bool) confirmation;
+        mapping(address => bool) confirmations;
     }
     
     Request[] public requests;
@@ -52,11 +52,30 @@ contract Project {
            description: description,
            value: value,
            recipient: recipient,
-           complete: false
+           complete: false,
+           confirmationCount: 0
         });
         
         // Add the request struct to the request array
         requests.push(newRequest);
+    }
+    
+    // A function to manage our voting system
+    function approveRequest(uint index) public {
+        Request storage request = requests[index];
+        
+        // Confirms that the address calling this function is a voter.
+        require(voters[msg.sender]);
+        
+        // Confirms that the address calling this function didn't already vote.
+        require(!request.confirmations[msg.sender]);
+        
+        // Mark the address as a confirmed vote
+        request.confirmations[msg.sender] = true;
+        
+        // Add the address to the confirmations mapping
+        request.confirmationCount++;
+        
     }
     
 }
