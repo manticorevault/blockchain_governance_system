@@ -8,12 +8,14 @@ contract Project {
         uint value;
         address recipient;
         bool complete;
+        uint confirmationCount;
+        mapping(address => bool) confirmation;
     }
     
     Request[] public requests;
     address public manager;
-    address[] public voters;
     uint public minimumAmount;
+    mapping(address => bool) public voters;
     
     
     // Create a modifier to lock out senders that
@@ -37,13 +39,15 @@ contract Project {
         // Requires a payment > minimumAmount
         require(msg.value > minimumAmount); 
         
-        // Add the payer to the voters array
-        voters.push(msg.sender);
+        // Adds a new key to the voters mapping
+        // and attributes its value to true. 
+        voters[msg.sender] = true;
     }
     
     // Declare the Request struct and add fields to it
     // with the restricted modifier
     function addRequest(string description, uint value, address recipient) restricted public {
+        
         Request memory newRequest = Request({
            description: description,
            value: value,
