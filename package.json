@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/manticorevault/blockchain_governance_system#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "fs-extra": "^9.0.1",
     "ganache-cli": "^6.12.1",
     "mocha": "^8.2.1",
