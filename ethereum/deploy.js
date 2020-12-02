@@ -1,6 +1,6 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
-const compiledFactory = require('./build/CampaignFactory.json');
+const compiledFactory = require('./build/ProjectFactory.json');
 
 const provider = new HDWalletProvider(
     'walnut jewel offer sudden tent border ketchup wait taxi tunnel pear nothing',
