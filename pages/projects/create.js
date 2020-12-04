@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import Layout from "../../components/Layout";
 
 class ProjectCreate extends Component {
     render() {
-        return <h1> Create a Project! </h1>
+        return (
+            <Layout>
+                <h1> Create a Project! </h1>
+            </Layout>
+
+        )
     }
 }
 

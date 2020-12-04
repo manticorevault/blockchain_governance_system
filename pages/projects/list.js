@@ -35,11 +35,6 @@ class ProjectList extends Component {
 
             <Layout>
                 <div>
-                    <link
-                        async
-                        rel="stylesheet"
-                        href="//cdn.jsdelivr.net/npm/semantic-ui@2.0.0/dist/semantic.min.css"
-                    />
                     <h1> Projects </h1>
 
                     <Button
