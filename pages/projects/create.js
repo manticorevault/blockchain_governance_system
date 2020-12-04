@@ -9,13 +9,18 @@ class ProjectCreate extends Component {
     // Prepare the state on load
     state = {
         miniumAmount: "",
-        errorMessage: ""
+        errorMessage: "",
+        loading: false
     };
 
     // Define the event handler component for submitting the form
     onSubmit = async (event) => {
         // Prevent default form behavior
         event.preventDefault();
+
+        // Activate the loading state
+        // Clean the error message afterwards
+        this.setState({ loading: true, errorMessage: "" });
 
         // Add an error handler
         try {
@@ -33,6 +38,9 @@ class ProjectCreate extends Component {
             // Return the error to the user
             this.setState({ errorMessage: err.message });
         }
+
+        // Turn loading off again once the transaction is completed
+        this.setState({ loading: false });
 
     };
 
@@ -56,7 +64,7 @@ class ProjectCreate extends Component {
                     </Form.Field>
 
                     <Message error header="Oh no!" content={this.state.errorMessage} />
-                    <Button color="olive"> Create! </Button>
+                    <Button loading={this.state.loading} color="olive"> Create! </Button>
                 </Form>
             </Layout>
 
