@@ -4,6 +4,9 @@ import Layout from "../../components/Layout";
 import factory from "../../ethereum/factory"
 import web3 from "../../ethereum/web3";
 
+// Import the router helpers
+import { Router } from "../../routes";
+
 class ProjectCreate extends Component {
 
     // Prepare the state on load
@@ -34,6 +37,9 @@ class ProjectCreate extends Component {
                 .send({
                     from: accounts[0]
                 });
+
+            // Redirect the user to the projects list 
+            Router.pushRoute("/projects/list")
         } catch (err) {
             // Return the error to the user
             this.setState({ errorMessage: err.message });
