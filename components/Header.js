@@ -8,7 +8,7 @@ export default () => {
         <Menu style={{ marginTop: "10px" }}>
             <Menu.Item>
                 <Button
-                    content="MGMTLinks"
+                    content="Home"
                     // Add handshake or handshake outline
                     icon="connectdevelop"
                     href="/"

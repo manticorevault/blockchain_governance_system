@@ -1,11 +1,39 @@
 import React, { Component } from "react";
-import { Form, Input, Button } from "semantic-ui-react"
+import { Form, Input, Button, Message } from "semantic-ui-react"
 import Layout from "../../components/Layout";
+import factory from "../../ethereum/factory"
+import web3 from "../../ethereum/web3";
 
 class ProjectCreate extends Component {
 
+    // Prepare the state on load
     state = {
-        miniumAmount: ""
+        miniumAmount: "",
+        errorMessage: ""
+    };
+
+    // Define the event handler component for submitting the form
+    onSubmit = async (event) => {
+        // Prevent default form behavior
+        event.preventDefault();
+
+        // Add an error handler
+        try {
+            // Retrieve the list of accounts
+            const accounts = await web3.eth.getAccounts();
+
+            // Call the factory smart contract
+            await factory
+                .methods
+                .createProject(this.state.miniumAmount)
+                .send({
+                    from: accounts[0]
+                });
+        } catch (err) {
+            // Return the error to the user
+            this.setState({ errorMessage: err.message });
+        }
+
     };
 
     render() {
@@ -13,10 +41,10 @@ class ProjectCreate extends Component {
             <Layout>
                 <h2> Create a Project! </h2>
 
-                <Form>
+                <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
                     <Form.Field>
                         <label>
-                            Minimum amount to participate in the project
+                            Define the minimum amount to participate in the project
                         </label>
                         <Input
                             label="Wei"
@@ -27,6 +55,7 @@ class ProjectCreate extends Component {
                         />
                     </Form.Field>
 
+                    <Message error header="Oh no!" content={this.state.errorMessage} />
                     <Button color="olive"> Create! </Button>
                 </Form>
             </Layout>

@@ -28,7 +28,7 @@ exports.default = function () {
                 lineNumber: 9
             }
         }, _react2.default.createElement(_semanticUiReact.Button, {
-            content: "MGMTLinks"
+            content: "Home"
             // Add handshake or handshake outline
             , icon: "connectdevelop",
             href: "/",
