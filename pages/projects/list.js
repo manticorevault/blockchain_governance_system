@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Button } from "semantic-ui-react";
+import { Card, Button, Label } from "semantic-ui-react";
 import factory from "../../ethereum/factory";
 import Layout from "../../components/Layout";
 
@@ -18,8 +18,8 @@ class ProjectList extends Component {
     renderProjects() {
         const items = this.props.projects.map(address => {
             return {
-                header: <h2>Short ID: {address.substr(0, 9)} </h2>,
-                description: address,
+                header: <Label color="black" style={{ borderRadius: "5px" }}> Short ID: {address.substr(0, 9)} </Label>,
+                description: <h4> Address: {address}</h4>,
                 extra: <Button color="olive" icon="eye" content="View Project" />,
                 fluid: true,
             }
