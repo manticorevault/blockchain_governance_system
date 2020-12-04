@@ -9,9 +9,9 @@ export default () => {
             <Menu.Item>
                 <Button
                     content="Links"
-
                     // Add handshake or handshake outline
                     icon="connectdevelop"
+                    href="/"
                     fluid
                     primary
                 />
@@ -21,11 +21,13 @@ export default () => {
                     <Button
                         color="olive"
                         content="Project List"
+                        href="/projects/list"
                         icon="unordered list" />
                 </Menu.Item>
                 <Menu.Item>
                     <Button
                         content="New Project"
+                        href="/projects/create"
                         icon="add"
                         secondary
                     />

@@ -39,7 +39,7 @@ const HomepageHeading = ({ mobile }) => (
     <Container text>
         <Header
             as='h1'
-            content='Links'
+            content='MGMTLinks'
             inverted
             style={{
                 fontSize: mobile ? '2em' : '4em',
@@ -50,7 +50,7 @@ const HomepageHeading = ({ mobile }) => (
         />
         <Header
             as='h2'
-            content='Project management governance via Blockchain'
+            content='Transparent project management via Blockchain'
             inverted
             style={{
                 fontSize: mobile ? '1.5em' : '1.7em',
@@ -118,16 +118,19 @@ class DesktopContainer extends Component {
                             size='large'
                         >
                             <Container>
-                                <Menu.Item as='a' active>
+                                <Menu.Item as='a' href="/" active>
                                     Home
-                </Menu.Item>
+                                </Menu.Item>
                                 <Menu.Item position='right'>
                                     <Button
+                                        href="/projects/list"
                                         color="olive"
                                         content="Project List"
-                                        icon="unordered list" />
+                                        icon="unordered list"
+                                    />
                                     <Button
                                         content="New Project"
+                                        href="/projects/create"
                                         icon="add"
                                         inverted
                                         color="white"
