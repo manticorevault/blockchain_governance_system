@@ -118,6 +118,7 @@ class DesktopContainer extends Component {
                             size='large'
                         >
                             <Container>
+
                                 <Menu.Item as='a' href="/" active>
                                     Home
                                 </Menu.Item>

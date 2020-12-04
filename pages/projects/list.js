@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Card, Button, Label } from "semantic-ui-react";
 import factory from "../../ethereum/factory";
 import Layout from "../../components/Layout";
+import { Link } from "../../routes";
 
 // Access the Deployed Projects and display them
 class ProjectList extends Component {
@@ -20,7 +21,13 @@ class ProjectList extends Component {
             return {
                 header: <Label color="black" style={{ borderRadius: "5px" }}> Short ID: {address.substr(0, 9)} </Label>,
                 description: <h4> Address: {address}</h4>,
-                extra: <Button color="olive" icon="eye" content="View Project" />,
+                extra: (
+                    <Link route={`/campaigns/${address}`}>
+                        <a>
+                            <Button color="olive" icon="eye" content="View Project" />
+                        </a>
+                    </Link>
+                ),
                 fluid: true,
             }
 
@@ -28,6 +35,7 @@ class ProjectList extends Component {
 
         return <Card.Group items={items} />
     }
+
 
     render() {
         // Display the list of projects in the front end
@@ -37,12 +45,17 @@ class ProjectList extends Component {
                 <div>
                     <h1> Projects </h1>
 
-                    <Button
-                        content="Start a new Project"
-                        icon="add"
-                        floated="right"
-                        secondary
-                    />
+                    <Link route="/projects/create">
+                        <a>
+                            <Button
+                                content="Start a new Project"
+                                icon="add"
+                                floated="right"
+                                secondary
+                            />
+                        </a>
+                    </Link>
+
 
                     {this.renderProjects()}
                 </div>
