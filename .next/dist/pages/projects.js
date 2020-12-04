@@ -36,6 +36,8 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _semanticUiReact = require("semantic-ui-react");
+
 var _factory = require("../ethereum/factory");
 
 var _factory2 = _interopRequireDefault(_factory);
@@ -57,15 +59,61 @@ var ProjectList = function (_Component) {
     }
 
     (0, _createClass3.default)(ProjectList, [{
+        key: "renderProjects",
+
+        // A function to create a card group component
+        // (Based on Semantic UI)
+        value: function renderProjects() {
+            var items = this.props.projects.map(function (address) {
+                return {
+                    header: _react2.default.createElement("h2", {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 20
+                        }
+                    }, "Short ID: ", address.substr(0, 9), " "),
+                    description: address,
+                    extra: _react2.default.createElement(_semanticUiReact.Button, { color: "olive", icon: "eye", content: "View Project", __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 22
+                        }
+                    }),
+                    fluid: true
+                };
+            });
+
+            return _react2.default.createElement(_semanticUiReact.Card.Group, { items: items, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 28
+                }
+            });
+        }
+    }, {
         key: "render",
         value: function render() {
             // Display the list of projects in the front end
             return _react2.default.createElement("div", {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 16
+                    lineNumber: 33
                 }
-            }, this.props.projects[0]);
+            }, _react2.default.createElement("link", {
+                async: true,
+                rel: "stylesheet",
+                href: "//cdn.jsdelivr.net/npm/semantic-ui@2.0.0/dist/semantic.min.css",
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 34
+                }
+            }), this.renderProjects(), _react2.default.createElement(_semanticUiReact.Button, {
+                content: "Start a new Project",
+                icon: "add",
+                secondary: true,
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 40
+                }
+            }));
         }
     }], [{
         key: "getInitialProps",
@@ -105,4 +153,4 @@ var ProjectList = function (_Component) {
 }(_react.Component);
 
 exports.default = ProjectList;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL3Byb2plY3RzLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIlByb2plY3RMaXN0IiwicHJvcHMiLCJwcm9qZWN0cyIsIm1ldGhvZHMiLCJnZXREZXBsb3llZFByb2plY3RzIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPLEFBQWE7Ozs7Ozs7OztBQUVwQjs7SSxBQUNNOzs7Ozs7Ozs7OztpQ0FTTyxBQUNMO0FBQ0E7bUNBQU8sY0FBQTs7OEJBQUE7Z0NBQUEsQUFBTTtBQUFOO0FBQUEsYUFBQSxPQUFNLEFBQUssTUFBTCxBQUFXLFNBQXhCLEFBQU8sQUFBTSxBQUFvQixBQUNwQzs7O2FBWEQ7Ozs7Ozs7Ozs7O3VDQUUyQixrQkFBQSxBQUFRLFFBQVIsQUFBZ0Isc0IsQUFBaEIsQUFBc0M7O2lDQUF2RDtBO2lFQUdDLEVBQUUsVUFBRixBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBTlcsQSxBQWdCMUI7O2tCQUFBLEFBQWUiLCJmaWxlIjoicHJvamVjdHMuanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL2hvbWUvYXJ0dXIvRG9jdW1lbnRzL2Jsb2NrY2hhaW5fZ292ZXJuYW5jZV9zeXN0ZW0ifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL3Byb2plY3RzLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkJ1dHRvbiIsImZhY3RvcnkiLCJQcm9qZWN0TGlzdCIsIml0ZW1zIiwicHJvcHMiLCJwcm9qZWN0cyIsIm1hcCIsImhlYWRlciIsImFkZHJlc3MiLCJzdWJzdHIiLCJkZXNjcmlwdGlvbiIsImV4dHJhIiwiZmx1aWQiLCJyZW5kZXJQcm9qZWN0cyIsIm1ldGhvZHMiLCJnZXREZXBsb3llZFByb2plY3RzIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFTLEFBQU07O0FBQ2YsQUFBTyxBQUFhOzs7Ozs7Ozs7QUFFcEI7O0lBQ00sQTs7Ozs7Ozs7OzthQVNGOztBQUNBOzt5Q0FDaUIsQUFDYjtnQkFBTSxhQUFRLEFBQUssTUFBTCxBQUFXLFNBQVgsQUFBb0IsSUFBSSxtQkFBVyxBQUM3Qzs7NENBQ1ksY0FBQTs7c0NBQUE7d0NBQUE7QUFBQTtBQUFBLHFCQUFBLEVBQWUsc0JBQUEsQUFBUSxPQUFSLEFBQWUsR0FBOUIsQUFBZSxBQUFrQixJQUR0QyxBQUNLLEFBQ1I7aUNBRkcsQUFFVSxBQUNiOzJDQUFPLEFBQUMseUNBQU8sT0FBUixBQUFjLFNBQVEsTUFBdEIsQUFBMkIsT0FBTSxTQUFqQyxBQUF5QztzQ0FBekM7d0NBSEosQUFHSSxBQUNQO0FBRE87cUJBQUE7MkJBSFgsQUFBTyxBQUlJLEFBR2Q7QUFQVSxBQUNIO0FBRlIsQUFBYyxBQVVkLGFBVmM7O2lEQVVQLEFBQUMsc0JBQUQsQUFBTSxTQUFNLE9BQVosQUFBbUI7OEJBQW5CO2dDQUFQLEFBQU8sQUFDVjtBQURVO2FBQUE7Ozs7aUNBR0YsQUFDTDtBQUNBO21DQUFPLGNBQUE7OzhCQUFBO2dDQUFBLEFBQ0g7QUFERztBQUFBLGFBQUE7dUJBQ0gsQUFFSTtxQkFGSixBQUVRLEFBQ0o7c0JBSEosQUFHUzs7OEJBSFQ7Z0NBREcsQUFDSCxBQUtDO0FBTEQ7QUFDSSxxQkFGRCxBQU1GLEFBQUssQUFDTixrQ0FBQSxBQUFDO3lCQUFELEFBQ1ksQUFDUjtzQkFGSixBQUVTLEFBQ0w7MkJBSEo7OzhCQUFBO2dDQVBKLEFBQU8sQUFPSCxBQU1QO0FBTk87QUFDSTs7O2FBbENaOzs7Ozs7Ozs7Ozt1Q0FFMkIsa0JBQUEsQUFBUSxRQUFSLEFBQWdCLHNCQUFoQixBQUFzQyxBOztpQ0FBdkQ7QTtpRUFHQyxFQUFFLFVBQUYsQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQU5XLEEsQUE0QzFCOztrQkFBQSxBQUFlIiwiZmlsZSI6InByb2plY3RzLmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9ob21lL2FydHVyL0RvY3VtZW50cy9ibG9ja2NoYWluX2dvdmVybmFuY2Vfc3lzdGVtIn0=
