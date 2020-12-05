@@ -22,7 +22,7 @@ class ProjectList extends Component {
                 header: <Label color="black" style={{ borderRadius: "5px" }}> Short ID: {address.substr(0, 9)} </Label>,
                 description: <h4> Address: {address}</h4>,
                 extra: (
-                    <Link route={`/campaigns/${address}`}>
+                    <Link route={`/projects/${address}`}>
                         <a>
                             <Button color="olive" icon="eye" content="View Project" />
                         </a>
@@ -45,7 +45,7 @@ class ProjectList extends Component {
                 <div>
                     <h1> Projects </h1>
 
-                    <Link route="/projects/create">
+                    {/* <Link route="/projects/create">
                         <a>
                             <Button
                                 content="Start a new Project"
@@ -54,7 +54,7 @@ class ProjectList extends Component {
                                 secondary
                             />
                         </a>
-                    </Link>
+                    </Link> */}
 
 
                     {this.renderProjects()}
