@@ -15,7 +15,7 @@ var _ProjectFactory2 = _interopRequireDefault(_ProjectFactory);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Create a contract instance and export it
-var contractInstance = new _web2.default.eth.Contract(JSON.parse(_ProjectFactory2.default.interface), "0x12B30014784623Be3ea4EE643c8990b6dd9C69E1" // Address where the contract was deployed
+var contractInstance = new _web2.default.eth.Contract(JSON.parse(_ProjectFactory2.default.interface), "0xBEb6E73316927620057825650b384f3182e0c565" // Address where the contract was deployed
 );
 
 exports.default = contractInstance;

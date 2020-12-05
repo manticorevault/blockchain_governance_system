@@ -120,5 +120,24 @@ contract Project {
         // Update the bool flag to true
         request.complete = true;
     }
+
+    // Function to retrieve important info about each project
+    function getInfo() view public returns (
+        uint, uint, uint, uint, address
+        ) {
+        return (
+            minimumAmount,
+            this.balance,
+            requests.length,
+            votersCount,
+            manager
+            
+        );
+    }
+    
+    // Function to return the requests count 
+    function getRequestsCount() view public returns (uint) {
+        return requests.length;
+    }
     
 }
