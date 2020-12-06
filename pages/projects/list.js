@@ -29,11 +29,12 @@ class ProjectList extends Component {
                     </Link>
                 ),
                 fluid: true,
+                style: { overflowWrap: "break-word" }
             }
 
         });
 
-        return <Card.Group items={items} />
+        return <Card.Group itemsPerRow={2} items={items} />
     }
 
 
