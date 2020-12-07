@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Card, Icon } from "semantic-ui-react";
+import { Card, Icon, Grid } from "semantic-ui-react";
 import Layout from "../../components/Layout";
+import ContributionForm from "../../components/ContributionForm";
 import Project from "../../ethereum/project";
 import web3 from "../../ethereum/web3";
 
@@ -78,7 +79,17 @@ class ProjectSingle extends Component {
         return (
             <Layout>
                 <h3> Project Page </h3>
-                {this.renderCards()}
+
+                <Grid>
+                    <Grid.Column width={10}>
+                        {this.renderCards()}
+                    </Grid.Column>
+
+                    <Grid.Column width={6}>
+                        <ContributionForm />
+                    </Grid.Column>
+                </Grid>
+
             </Layout>
         )
     }
