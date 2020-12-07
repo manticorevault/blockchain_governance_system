@@ -19,8 +19,8 @@ class ProjectList extends Component {
     renderProjects() {
         const items = this.props.projects.map(address => {
             return {
-                header: <Label color="black" style={{ borderRadius: "5px" }}> Short ID: {address.substr(0, 9)} </Label>,
-                description: <h4> Address: {address}</h4>,
+                header: <Label color="black" style={{ borderRadius: "5px", overflowWrap: "break-word" }}> Short ID: {address.substr(0, 9)} </Label>,
+                description: "",
                 extra: (
                     <Link route={`/projects/${address}`}>
                         <a>
