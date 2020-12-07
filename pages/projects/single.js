@@ -88,7 +88,7 @@ class ProjectSingle extends Component {
     render() {
         return (
             <Layout>
-                <h3> Project Page - {this.props.address} </h3>
+                <h3> Project {this.props.address} </h3>
 
                 <Grid>
                     <Grid.Row>
