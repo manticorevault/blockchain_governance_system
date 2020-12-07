@@ -40,8 +40,11 @@ class RequestRow extends Component {
         // Destructure the props
         const { id, request, votersCount } = this.props
 
+        // Indicates if a request is ready to be confirmed
+        const readyToConfirm = request.confirmationCount > votersCount / 2;
+
         return (
-            <Row>
+            <Row disabled={request.complete} positive={readyToConfirm && !request.complete}>
                 <Cell>
                     {id + 1}
                 </Cell>
@@ -63,15 +66,20 @@ class RequestRow extends Component {
                 </Cell>
 
                 <Cell>
-                    <Button color="olive" onClick={this.onApprove}>
-                        Approve
-                    </Button>
+                    {request.complete ? null : (
+                        <Button color="olive" onClick={this.onApprove}>
+                            Approve
+                        </Button>
+                    )}
                 </Cell>
 
                 <Cell>
-                    <Button color="black" onClick={this.onCompletion}>
-                        Finalize
-                    </Button>
+                    {request.complete ? null : (
+                        <Button color="black" onClick={this.onCompletion}>
+                            Finalize
+                        </Button>
+                    )}
+
                 </Cell>
             </Row>
         )

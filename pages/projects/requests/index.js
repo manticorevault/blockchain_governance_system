@@ -67,7 +67,11 @@ class RequestIndex extends Component {
                         Requests
                     </Breadcrumb.Section>
                 </Breadcrumb>
-                <h3> Request List </h3>
+                <h2> Request List </h2>
+
+                <div style={{ marginBottom: "15px" }}>
+                    <h3>This project has {this.props.requestCount} requests</h3>
+                </div>
                 <Link route={`/projects/${this.props.address}/requests/create`}>
                     <a>
                         <Button color="olive">
