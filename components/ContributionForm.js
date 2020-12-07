@@ -55,6 +55,9 @@ class ContributionForm extends Component {
                     <label>
                         Contribution Amount
                         <Input
+                            icon="money bill alternate outline"
+                            iconPosition="left"
+                            placeholder="Investment"
                             label="ETH"
                             labelPosition="right"
                             value={this.state.value}

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Layout from "../../../components/Layout";
-import { Button, Icon, Table } from "semantic-ui-react";
+import { Breadcrumb, Button, Icon, Table } from "semantic-ui-react";
 import { Link } from "../../../routes";
 import Project from "../../../ethereum/project";
+import RequestRow from "../../../components/RequestRow";
 
 
 class RequestIndex extends Component {
@@ -24,7 +25,24 @@ class RequestIndex extends Component {
             })
         );
 
-        return { address, requests, requestCount };
+        // Pull the total number of voters
+        const votersCount = await project.methods.votersCount().call();
+
+        return { address, requests, requestCount, votersCount };
+    }
+
+    // Implement a helper method to iterate on requests list and
+    // create a new row for each request
+    createRows() {
+        return this.props.requests.map((request, index) => {
+            return <RequestRow
+                key={index}
+                id={index}
+                request={request}
+                address={this.props.address}
+                votersCount={this.props.votersCount}
+            />
+        });
     }
 
     render() {
@@ -34,18 +52,21 @@ class RequestIndex extends Component {
 
         return (
             <Layout>
-                <Link route={`/projects/${this.props.address}`}>
-                    <a>
-                        <Button
-                            secondary
-                            icon
-                            labelPosition="left"
-                        >
-                            <Icon name="arrow alternate circle left outline" />
-                            Project Page
-                        </Button>
-                    </a>
-                </Link>
+                <Breadcrumb>
+                    <Breadcrumb.Section>
+                        <Link route={`/projects/${this.props.address}`}>
+                            <a>
+                                Project {this.props.address}
+                            </a>
+                        </Link>
+                    </Breadcrumb.Section>
+
+                    <Breadcrumb.Divider />
+
+                    <Breadcrumb.Section active>
+                        Requests
+                    </Breadcrumb.Section>
+                </Breadcrumb>
                 <h3> Request List </h3>
                 <Link route={`/projects/${this.props.address}/requests/create`}>
                     <a>
@@ -55,7 +76,7 @@ class RequestIndex extends Component {
                     </a>
                 </Link>
 
-                <Table>
+                <Table celled padded selectable color="olive">
                     <Header>
                         <Row>
                             <HeaderCell>
@@ -67,7 +88,7 @@ class RequestIndex extends Component {
                             </HeaderCell>
 
                             <HeaderCell>
-                                Value
+                                Value (ETH)
                             </HeaderCell>
 
                             <HeaderCell>
@@ -87,6 +108,10 @@ class RequestIndex extends Component {
                             </HeaderCell>
                         </Row>
                     </Header>
+
+                    <Body>
+                        {this.createRows()}
+                    </Body>
                 </Table>
             </Layout>
 

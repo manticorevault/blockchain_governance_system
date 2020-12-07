@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Layout from "../../../components/Layout";
-import { Form, Input, Button, Message, Icon } from "semantic-ui-react";
+import { Form, Input, Button, Message, Icon, Breadcrumb } from "semantic-ui-react";
 import Project from "../../../ethereum/project";
 import web3 from "../../../ethereum/web3";
 import { Link, Router } from "../../../routes";
-import { isObject } from "util";
 
 class RequestCreate extends Component {
 
@@ -60,18 +59,31 @@ class RequestCreate extends Component {
         return (
             <Layout>
 
-                <Link route={`/projects/${this.props.address}/requests`}>
-                    <a>
-                        <Button
-                            secondary
-                            icon
-                            labelPosition="left"
-                        >
-                            <Icon name="arrow alternate circle left outline" />
-                            Request List
-                        </Button>
-                    </a>
-                </Link>
+                <Breadcrumb>
+                    <Breadcrumb.Section>
+                        <Link route={`/projects/${this.props.address}`}>
+                            <a>
+                                Project {this.props.address}
+                            </a>
+                        </Link>
+                    </Breadcrumb.Section>
+
+                    <Breadcrumb.Divider />
+
+                    <Breadcrumb.Section>
+                        <Link route={`/projects/${this.props.address}/requests`}>
+                            <a>
+                                Requests
+                            </a>
+                        </Link>
+                    </Breadcrumb.Section>
+
+                    <Breadcrumb.Divider />
+
+                    <Breadcrumb.Section active>
+                        Create Request
+                    </Breadcrumb.Section>
+                </Breadcrumb>
                 <h3> Create a New Request </h3>
                 <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
                     <Form.Field>

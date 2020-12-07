@@ -63,6 +63,9 @@ class ProjectCreate extends Component {
                         <Input
                             label="Wei"
                             labelPosition="right"
+                            icon="money bill alternate outline"
+                            iconPosition="left"
+                            placeholder="How much will it cost?"
                             color="black"
                             value={this.state.miniumAmount}
                             onChange={event => this.setState({ miniumAmount: event.target.value })}
