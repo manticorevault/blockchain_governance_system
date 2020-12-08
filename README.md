@@ -82,6 +82,8 @@ npm run dev
 
 ### This application was deployed to the address - 0xBEb6E73316927620057825650b384f3182e0c565
 
+## Deployment 
+Fix deployment problems to put the application live. So far, problems with Vercel and Heroku
 
 ## Author
 
