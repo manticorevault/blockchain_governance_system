@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to MGMTLinks 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.6-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/manticorevault/blockchain_governance_system#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -93,7 +93,7 @@ npm run dev
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/manticorevault/blockchain_governance_system/issues). You can also take a look at the [contributing guide](https://github.com/manticorevault/blockchain_governance_system/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />
 
 ## Show your support
 
