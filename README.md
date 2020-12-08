@@ -1,16 +1,59 @@
-------------------------
+<h1 align="center">Welcome to MGMTLinks 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/manticorevault/blockchain_governance_system#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/manticorevault/blockchain_governance_system/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/manticorevault/blockchain_governance_system/blob/master/LICENSE" target="_blank">
+    <img alt="License: ISC" src="https://img.shields.io/github/license/manticorevault/MGMTLinks" />
+  </a>
+</p>
 
-1 - Clone this repo
-2 - npm install 
-3 - Run npm run test to test it
-4 - Go to /ethereum and run node compile.js (If you get any errors, check for solc version on package.json - If it's not 0.4.17, then uninstall it (npm uninstall solc) and install it again in the right version - npm install solc@0.4.17)
-4.1 - Still on /ethereum, run deploy.js
+> A blockchain-based management system. Manage your project's requests, your contributors vote counts and more!
 
-5 - Go to the root directory and run NPM RUN DEV to start the application
+### 🏠 [Homepage](https://github.com/manticorevault/blockchain_governance_system#readme)
 
-> Deployed to address - 0xBEb6E73316927620057825650b384f3182e0c565
+## Install
 
-Inspiration and Resources from: 
-- https://semantic-ui.com/examples/homepage.html
-- https://react.semantic-ui.com/collections/form/
-- Stephen Grider Blockchain Course
+```sh
+npm install
+```
+
+## Usage
+
+```sh
+npm run dev
+```
+
+## Run tests
+
+```sh
+npm run test
+```
+
+## Author
+
+👤 **Artur Serra**
+
+* Website: https://dev.to/manticorevault
+* Github: [@manticorevault](https://github.com/manticorevault)
+* LinkedIn: [@artur-serra](https://linkedin.com/in/artur-serra)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/manticorevault/blockchain_governance_system/issues). You can also take a look at the [contributing guide](https://github.com/manticorevault/blockchain_governance_system/blob/master/CONTRIBUTING.md).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2020 [Artur Serra](https://github.com/manticorevault).<br />
+This project is [ISC](https://github.com/manticorevault/blockchain_governance_system/blob/master/LICENSE) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
