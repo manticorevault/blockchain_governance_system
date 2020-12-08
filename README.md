@@ -17,7 +17,7 @@
 ### 🏠 [Homepage](https://github.com/manticorevault/blockchain_governance_system#readme)
 
 ## Technologies
-https://img.shields.io/badge/smart%20contract-solidity-yellow
+![Solidity](https://img.shields.io/badge/smart%20contract-solidity-yellow?style=for-the-badge&logo=Ethereum)
 
 ## Cloning
 ```sh
