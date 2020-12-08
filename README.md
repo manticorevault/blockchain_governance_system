@@ -51,7 +51,7 @@ cd ethereum
 ## DEMO
 
 # 1 Check the projects in your organization
-![Project-List]("/src/project_list.gif")
+![Project-List](/src/project_list.gif)
 =======
 ```sh
 node compile.js
