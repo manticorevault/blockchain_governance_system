@@ -16,10 +16,51 @@
 
 ### 🏠 [Homepage](https://github.com/manticorevault/blockchain_governance_system#readme)
 
-## Install
+## Technologies
+- ![Solidity](https://img.shields.io/badge/smart%20contract-solidity-blue?style=for-the-badge&logo=Ethereum) 
+- ![NodeJS](https://img.shields.io/badge/backend-NodeJS-339933?style=for-the-badge&logo=Node.js)
+- ![JavaScript](https://img.shields.io/badge/language-JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript )
+- ![ReactJS](https://img.shields.io/badge/frontend-React-61DAFB?style=for-the-badge&logo=React)
+- ![NextJS](https://img.shields.io/badge/frontend-Next-000000?style=for-the-badge&logo=Next.js)
+- ![Mocha](https://img.shields.io/badge/testing-Mocha-8D6748?style=for-the-badge&logo=Mocha)
+
+## Cloning
+```sh
+git clone https://github.com/manticorevault/blockchain_governance_system/
+```
+
+## Installing
 
 ```sh
 npm install
+```
+
+## Running tests
+
+```sh
+npm run test
+```
+
+## Compiling the Smart Contract
+
+```sh
+cd ethereum
+```
+
+<<<<<<< HEAD
+## DEMO
+
+# 1 Check the projects in your organization
+![Project-List]("/src/project_list.gif")
+=======
+```sh
+node compile.js
+```
+
+(If you get any errors, check for solc version on package.json - If it's not 0.4.17, then uninstall it (npm uninstall solc) and install it again in the right version - npm install solc@0.4.17)
+
+```sh
+node deploy.js
 ```
 
 ## Usage
@@ -28,16 +69,8 @@ npm install
 npm run dev
 ```
 
-## Run tests
-
-```sh
-npm run test
-```
-
-## DEMO
-
-# 1 Check the projects in your organization
-![Project-List]("/src/project_list.gif")
+### This application was deployed to the address - 0xBEb6E73316927620057825650b384f3182e0c565
+>>>>>>> bd1afe64bd07701f66c94461af3a4080fa8b4f42
 
 ## Author
 
@@ -55,10 +88,13 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 Give a ⭐️ if this project helped you!
 
-## 📝 License
+## Resources
+- https://react.semantic-ui.com/
+- https://www.udemy.com/user/sgslo/
+- https://nextjs.org/
+- https://simpleicons.org/
+- https://shields.io/
 
-Copyright © 2020 [Artur Serra](https://github.com/manticorevault).<br />
-This project is [ISC](https://github.com/manticorevault/blockchain_governance_system/blob/master/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
