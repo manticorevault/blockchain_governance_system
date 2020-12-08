@@ -34,6 +34,11 @@ npm run dev
 npm run test
 ```
 
+## DEMO
+
+# 1 Check the projects in your organization
+![Project-List]("/src/project_list.gif")
+
 ## Author
 
 👤 **Artur Serra**
