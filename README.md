@@ -47,12 +47,20 @@ npm run test
 cd ethereum
 ```
 
-<<<<<<< HEAD
 ## DEMO
 
-# 1 Check the projects in your organization
+### 1 - Check the projects in your organization
 ![Project-List](/src/project_list.gif)
-=======
+
+### 2 - Create a new project
+![Create a Project](/src/create_a_new_project.gif)
+
+### 3 - Create a new governance request
+![Create a Governance Request](/src/create_arequest.gif)
+
+### 4 - Vote and finalize requests
+![Vote Requests](/src/approve_requests.gif)
+
 ```sh
 node compile.js
 ```
@@ -70,7 +78,7 @@ npm run dev
 ```
 
 ### This application was deployed to the address - 0xBEb6E73316927620057825650b384f3182e0c565
->>>>>>> bd1afe64bd07701f66c94461af3a4080fa8b4f42
+
 
 ## Author
 
