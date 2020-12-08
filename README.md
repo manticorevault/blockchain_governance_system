@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to MGMTLinks 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.6-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/manticorevault/blockchain_governance_system#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -12,9 +12,7 @@
   </a>
 </p>
 
-> A blockchain-based management system. Manage your project's requests, your contributors vote counts and more!
-
-### 🏠 [Homepage](https://github.com/manticorevault/blockchain_governance_system#readme)
+> MGMTLinks is a blockchain-based management system. Manage your project's requests, your contributors' vote counts and more! Build in a decentralized way, on top of the Ethereum blockchain, this application allows teams and organizations to better manage their project's governance. 
 
 ## Technologies
 - ![Solidity](https://img.shields.io/badge/smart%20contract-solidity-blue?style=for-the-badge&logo=Ethereum) 
@@ -23,6 +21,25 @@
 - ![ReactJS](https://img.shields.io/badge/frontend-React-61DAFB?style=for-the-badge&logo=React)
 - ![NextJS](https://img.shields.io/badge/frontend-Next-000000?style=for-the-badge&logo=Next.js)
 - ![Mocha](https://img.shields.io/badge/testing-Mocha-8D6748?style=for-the-badge&logo=Mocha)
+
+
+## DEMO
+
+### 1 - Check the projects in your organization
+![Project-List](/src/project_list.gif)
+
+
+### 2 - Create a new project
+![Create a Project](/src/create_a_new_project.gif)
+
+
+### 3 - Create a new governance request
+![Create a Governance Request](/src/create_arequest.gif)
+
+
+### 4 - Vote and finalize requests
+![Vote Requests](/src/approve_requests.gif)
+
 
 ## Cloning
 ```sh
@@ -47,12 +64,6 @@ npm run test
 cd ethereum
 ```
 
-<<<<<<< HEAD
-## DEMO
-
-# 1 Check the projects in your organization
-![Project-List](/src/project_list.gif)
-=======
 ```sh
 node compile.js
 ```
@@ -70,7 +81,9 @@ npm run dev
 ```
 
 ### This application was deployed to the address - 0xBEb6E73316927620057825650b384f3182e0c565
->>>>>>> bd1afe64bd07701f66c94461af3a4080fa8b4f42
+
+## Deployment 
+Fix deployment problems to put the application live. So far, problems with Vercel and Heroku
 
 ## Author
 
@@ -82,7 +95,7 @@ npm run dev
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/manticorevault/blockchain_governance_system/issues). You can also take a look at the [contributing guide](https://github.com/manticorevault/blockchain_governance_system/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />
 
 ## Show your support
 
