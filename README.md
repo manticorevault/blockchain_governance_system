@@ -12,7 +12,7 @@
   </a>
 </p>
 
-> A blockchain-based management system. Manage your project's requests, your contributors vote counts and more!
+> A blockchain-based management system. Manage your project's requests, your contributors' vote counts and more!
 
 ## Technologies
 - ![Solidity](https://img.shields.io/badge/smart%20contract-solidity-blue?style=for-the-badge&logo=Ethereum) 
