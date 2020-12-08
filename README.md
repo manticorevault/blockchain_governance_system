@@ -82,11 +82,11 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 Give a ⭐️ if this project helped you!
 
 ## Resources
-https://react.semantic-ui.com/
-https://www.udemy.com/user/sgslo/
-https://nextjs.org/
-https://simpleicons.org/
-https://shields.io/
+- https://react.semantic-ui.com/
+- https://www.udemy.com/user/sgslo/
+- https://nextjs.org/
+- https://simpleicons.org/
+- https://shields.io/
 
 
 ***
