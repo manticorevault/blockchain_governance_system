@@ -24,6 +24,25 @@
 - ![NextJS](https://img.shields.io/badge/frontend-Next-000000?style=for-the-badge&logo=Next.js)
 - ![Mocha](https://img.shields.io/badge/testing-Mocha-8D6748?style=for-the-badge&logo=Mocha)
 
+
+## DEMO
+
+### 1 - Check the projects in your organization
+![Project-List](/src/project_list.gif)
+
+
+### 2 - Create a new project
+![Create a Project](/src/create_a_new_project.gif)
+
+
+### 3 - Create a new governance request
+![Create a Governance Request](/src/create_arequest.gif)
+
+
+### 4 - Vote and finalize requests
+![Vote Requests](/src/approve_requests.gif)
+
+
 ## Cloning
 ```sh
 git clone https://github.com/manticorevault/blockchain_governance_system/
@@ -46,20 +65,6 @@ npm run test
 ```sh
 cd ethereum
 ```
-
-## DEMO
-
-### 1 - Check the projects in your organization
-![Project-List](/src/project_list.gif)
-
-### 2 - Create a new project
-![Create a Project](/src/create_a_new_project.gif)
-
-### 3 - Create a new governance request
-![Create a Governance Request](/src/create_arequest.gif)
-
-### 4 - Vote and finalize requests
-![Vote Requests](/src/approve_requests.gif)
 
 ```sh
 node compile.js
