@@ -29,13 +29,13 @@
 git clone https://github.com/manticorevault/blockchain_governance_system/
 ```
 
-## Install
+## Installing
 
 ```sh
 npm install
 ```
 
-## Run tests
+## Running tests
 
 ```sh
 npm run test
