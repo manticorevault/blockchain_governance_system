@@ -12,7 +12,7 @@
   </a>
 </p>
 
-> A blockchain-based management system. Manage your project's requests, your contributors' vote counts and more!
+> MGMTLinks is a blockchain-based management system. Manage your project's requests, your contributors' vote counts and more! Build in a decentralized way, on top of the Ethereum blockchain, this application allows teams and organizations to better manage their project's governance. 
 
 ## Technologies
 - ![Solidity](https://img.shields.io/badge/smart%20contract-solidity-blue?style=for-the-badge&logo=Ethereum) 
