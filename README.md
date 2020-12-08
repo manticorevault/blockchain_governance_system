@@ -17,7 +17,12 @@
 ### 🏠 [Homepage](https://github.com/manticorevault/blockchain_governance_system#readme)
 
 ## Technologies
-![Solidity](https://img.shields.io/badge/smart%20contract-solidity-yellow?style=for-the-badge&logo=Ethereum)
+- ![Solidity](https://img.shields.io/badge/smart%20contract-solidity-blue?style=for-the-badge&logo=Ethereum) 
+- ![NodeJS](https://img.shields.io/badge/backend-NodeJS-339933?style=for-the-badge&logo=Node.js)
+- ![JavaScript](https://img.shields.io/badge/language-JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript )
+- ![ReactJS](https://img.shields.io/badge/frontend-React-61DAFB?style=for-the-badge&logo=React)
+- ![NextJS](https://img.shields.io/badge/frontend-Next-000000?style=for-the-badge&logo=Next.js)
+- ![Mocha](https://img.shields.io/badge/testing-Mocha-8D6748?style=for-the-badge&logo=Mocha)
 
 ## Cloning
 ```sh
@@ -76,10 +81,13 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 Give a ⭐️ if this project helped you!
 
-## Sources
+## Resources
 https://react.semantic-ui.com/
 https://www.udemy.com/user/sgslo/
 https://nextjs.org/
+https://simpleicons.org/
+https://shields.io/
+
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
