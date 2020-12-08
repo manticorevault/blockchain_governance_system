@@ -1,5 +1,15 @@
 pragma solidity ^0.4.17;
 
+// >>>> Para: Fazenda Saco (Cliente final)
+
+// Cujo gerenciamento analogico de projetos e de governanca estava causando 
+// grandes problemas de organizacao e atrasando as tomadas criticas de decisao.
+
+// O MGMTLinks visa trazer um modelo imutavel, digital e decentralizado de gerenciamento
+// de projetos e governanca, fazendo com que todas as decisoes sejam votadas por todos os
+// contribuintes relacionados a cada um dos projetos criados, de maneira anonima, digital
+// e bem mais rapida. E, por ser uma aplicacao criada em cima do Blockchain do Ethereum,
+// essas decisoes podem ser facilmente auditadas, alem de estarem sempre disponiveis.
 
 // Write a Factory contract to create and deploy
 // instances of the Project contract, so the costs

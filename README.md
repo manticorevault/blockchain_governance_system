@@ -22,8 +22,11 @@
 - ![NextJS](https://img.shields.io/badge/frontend-Next-000000?style=for-the-badge&logo=Next.js)
 - ![Mocha](https://img.shields.io/badge/testing-Mocha-8D6748?style=for-the-badge&logo=Mocha)
 
+## Design
+![Presentation](/src/MGMTLinks.jpeg)
+![Interactions](/src/Interactions.jpeg)
 
-## DEMO
+## Demo
 
 ### 1 - Check the projects in your organization
 ![Project-List](/src/project_list.gif)
