@@ -16,10 +16,40 @@
 
 ### 🏠 [Homepage](https://github.com/manticorevault/blockchain_governance_system#readme)
 
+## Technologies
+https://img.shields.io/badge/smart%20contract-solidity-yellow
+
+## Cloning
+```sh
+git clone https://github.com/manticorevault/blockchain_governance_system/
+```
+
 ## Install
 
 ```sh
 npm install
+```
+
+## Run tests
+
+```sh
+npm run test
+```
+
+## Compiling the Smart Contract
+
+```sh
+cd ethereum
+```
+
+```sh
+node compile.js
+```
+
+(If you get any errors, check for solc version on package.json - If it's not 0.4.17, then uninstall it (npm uninstall solc) and install it again in the right version - npm install solc@0.4.17)
+
+```sh
+node deploy.js
 ```
 
 ## Usage
@@ -28,11 +58,7 @@ npm install
 npm run dev
 ```
 
-## Run tests
-
-```sh
-npm run test
-```
+### This application was deployed to the address - 0xBEb6E73316927620057825650b384f3182e0c565
 
 ## Author
 
@@ -50,6 +76,10 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 Give a ⭐️ if this project helped you!
 
+## Sources
+https://react.semantic-ui.com/
+https://www.udemy.com/user/sgslo/
+https://nextjs.org/
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
