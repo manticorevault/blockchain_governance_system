@@ -14,8 +14,6 @@
 
 > A blockchain-based management system. Manage your project's requests, your contributors vote counts and more!
 
-### 🏠 [Homepage](https://github.com/manticorevault/blockchain_governance_system#readme)
-
 ## Technologies
 - ![Solidity](https://img.shields.io/badge/smart%20contract-solidity-blue?style=for-the-badge&logo=Ethereum) 
 - ![NodeJS](https://img.shields.io/badge/backend-NodeJS-339933?style=for-the-badge&logo=Node.js)
