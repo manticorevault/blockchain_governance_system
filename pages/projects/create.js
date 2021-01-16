@@ -53,7 +53,7 @@ class ProjectCreate extends Component {
     render() {
         return (
             <Layout>
-                <h2> Create a Project! </h2>
+                <h2> Create a New Project! </h2>
 
                 <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
                     <Form.Field>
